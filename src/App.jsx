@@ -1,14 +1,15 @@
-import { useState } from 'react'
 import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import { Route, Routes } from 'react-router-dom';
+import Home from './routes/Home';
+import Play from './routes/Play';
+import Error from './routes/Error';
+const App = () => {
   return (
-    <div className="App">
-      Hello world
-    </div>
-  )
-}
-
-export default App
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/play" element={<Play/>} />
+        <Route path="*" element={<Error errorCode={404} msg="Page Not Found"/>} />
+      </Routes>
+    );
+  };
+  export default App
