@@ -1,8 +1,11 @@
 import React from 'react'
+import Button from '../components/Button';
 
 const Home = () => {
   return (
-    <div>I am home</div>
+    <div>
+      <Button/>
+    </div>
   );
 };
 
